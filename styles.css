@@ -1,0 +1,57 @@
+body.day-mode {
+    background-color: rgb(255, 255, 255);
+    color: rgb(20, 9, 1);
+}
+
+body.night-mode {
+    background-color: rgb(20, 9, 1);
+    color: rgb(255, 192, 90);
+}
+
+.navbar-nav {
+    display: none;
+}
+
+.navbar-nav.show-menu {
+    display: block;
+}
+
+.day-mode .btn-primary {
+    background-color: #c34e00;
+    border-color: #c34e00;
+    color: white;
+}
+
+.night-mode .btn-primary {
+    background-color: #ffc05a;
+    border-color: #ffc05a;
+    color: black;
+}
+
+.day-mode .navbar {
+    background-color: #f8f9fa;
+    color: black;
+}
+
+.night-mode .navbar {
+    background-color: #343a40;
+    color: white;
+}
+
+.day-mode .nav-link {
+    color: black;
+}
+
+.night-mode .nav-link {
+    color: white;
+}
+
+.day-mode-card {
+    background-color: #ffffff;
+    color: black;
+}
+
+.night-mode-card {
+    background-color: #343a40;
+    color: white;
+}

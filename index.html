@@ -1,13 +1,91 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-<title>Tytuł strony</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-<link rel="stylesheet" href="styles.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-<script src="scripts.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fox Images</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    
+<body class="day-mode">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Fox Images</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">O liskach</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#species">Gatunki lisów</a>
+                </li>
+            </ul>
+        </div>
+        <button id="toggleTheme" class="btn btn-secondary">Night Mode</button>
+    </nav>
+
+    <div id="home" class="container mt-5">
+        <h2>Witam wszystkie liski</h2>
+        <p>Tutaj mozesz oglądać piękne puchate kitki</p>
+    </div>
+
+    <div class="container mt-5">
+        <button id="showFoxButton" class="btn btn-primary">Pokaż liska</button>
+        <div id="imageContainer" class="mt-3"></div>
+    </div>
+
+    <div id="about" class="container mt-5">
+        <h2>O liskach</h2>
+        <p>Lis – nazwa zwyczajowa oznaczająca drapieżnego ssaka z rodzaju Vulpes, najczęściej stosowana w odniesieniu do gatunku Vulpes vulpes (w języku polskim zwanego lisem pospolitym, lisem rudym lub po prostu lisem), a także przedstawicieli innych gatunków, podobnych do lisa, a zaliczanych do rodzajów: Alopex, Dusicyon i Urocyon.
+           W klasyfikacji biologicznej nazwą lisy określane jest plemię Vulpini w rodzinie psowatych.
+           Lisie futro było i jest cenione ze względu na puszysty włos i kolor – w zależności od gatunku: od śnieżnobiałego, srebrzystego poprzez jasnorudy aż do czarnego.</p>
+    </div>
+
+    <div id="species" class="container mt-5">
+        <h2>Gatunki lisów</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card day-mode-card">
+                    <img src="https://example.com/fox1.jpg" class="card-img-top" alt="Lis 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Lis pospolity</h5>
+                        <p class="card-text">Lis pospolity, znany również jako lis rudy, jest najbardziej rozpowszechnionym gatunkiem lisa.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card day-mode-card">
+                    <img src="https://example.com/fox2.jpg" class="card-img-top" alt="Lis 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Lis polarny</h5>
+                        <p class="card-text">Lis polarny, znany również jako lis biały, zamieszkuje regiony arktyczne.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card day-mode-card">
+                    <img src="https://example.com/fox3.jpg" class="card-img-top" alt="Lis 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Lis fenek</h5>
+                        <p class="card-text">Lis fenek jest najmniejszym gatunkiem lisa, znanym z dużych uszu i zamieszkującym pustynie Afryki Północnej.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" class="container mt-5">
+        <h2>Contact</h2>
+        <p>Contact us at foximages@example.com.</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
