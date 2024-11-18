@@ -55,3 +55,10 @@ body.night-mode {
     background-color: #343a40;
     color: white;
 }
+
+.scaled-image {
+    max-width: 400px;
+    max-height: 400px;
+    width: auto;
+    height: auto;
+}

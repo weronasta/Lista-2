@@ -3,7 +3,7 @@ $(document).ready(function() {
     $('#toggleTheme').click(function() {
         $('body').toggleClass('night-mode day-mode');
         $(this).text(function(i, text) {
-            return text === "Night Mode" ? "Day Mode" : "Night Mode";
+            return text === "Tryb nocny jak lisek" ? "Tryb dzienny" : "Tryb nocny jak lisek";
         });
 
         // Update navbar and nav-link colors
@@ -33,7 +33,7 @@ $(document).ready(function() {
             .then(data => {
                 const imageContainer = $('#imageContainer');
                 imageContainer.empty(); // Clear previous images
-                const img = $('<img>').attr('src', data.image).addClass('img-fluid');
+                const img = $('<img>').attr('src', data.image).addClass('img-fluid scaled-image');
                 imageContainer.append(img);
             })
             .catch(error => console.error('Error fetching images:', error));
