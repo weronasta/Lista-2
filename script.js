@@ -35,21 +35,18 @@ $(document).ready(function() {
         $('.navbar-nav').toggleClass('show-menu');
     });
 
-    // Fetch fox image
-    $('#showFoxButton').click(function() {
-        fetch('https://randomfox.ca/floof/')
-            .then(response => response.json())
-            .then(data => {
-                const imageContainer = $('#imageContainer');
-                imageContainer.empty(); // Clear previous images
-                const img = $('<img>').attr('src', data.image).addClass('img-fluid scaled-image');
-                imageContainer.append(img);
-            })
-            .catch(error => console.error('Error fetching images:', error));
-    });
-
-    // Hide/show element on double click
-    $('#imageContainer').dblclick(function() {
-        $(this).toggle();
+    // Fetching images
+    $('#showFoxButton').click(async function() { 
+        try {
+            const response = await fetch('https://randomfox.ca/floof/'); // Asynchroniczne pobranie danych
+            const data = await response.json(); // Parsowanie odpowiedzi jako JSON
+    
+            const imageContainer = $('#imageContainer');
+            imageContainer.empty(); // Usunięcie poprzednich zdjęć
+            const img = $('<img>').attr('src', data.image).addClass('img-fluid scaled-image');
+            imageContainer.append(img); // Dodanie obrazka do kontenera
+        } catch (error) {
+            console.error('Error fetching images:', error); // Obsługa błędów
+        }
     });
 });
