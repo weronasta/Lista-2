@@ -29,13 +29,15 @@ body.night-mode {
 }
 
 .day-mode .navbar {
-    background-color: #f8f9fa;
+    background-color: #ffffff;
     color: black;
+    border-bottom: 1px solid #e2e2e2;
 }
 
 .night-mode .navbar {
     background-color: #343a40;
     color: white;
+    border-bottom: 1px solid #ffc05a;
 }
 
 .day-mode .nav-link {
@@ -46,19 +48,35 @@ body.night-mode {
     color: white;
 }
 
+.day-mode .navbar-brand {
+    color: #c34e00;
+}
+
+.night-mode .navbar-brand {
+    color: #ffc05a;
+}
+
 .day-mode-card {
     background-color: #ffffff;
     color: black;
+    border-radius: 12px;
 }
 
 .night-mode-card {
     background-color: #343a40;
     color: white;
+    border-radius: 12px;
 }
 
 .scaled-image {
-    max-width: 400px;
-    max-height: 400px;
+    max-width: 600px;
+    max-height: 600px;
     width: auto;
     height: auto;
+    border-radius: 12px;
 }
+
+.footer .text-muted {
+    text-align: center;
+    display: block;
+  }

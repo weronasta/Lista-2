@@ -1,14 +1,12 @@
 $(document).ready(function() {
-    // Toggle theme
+    // Tryb nocny
     $('#toggleTheme').click(function() {
-        $('body').toggleClass('night-mode day-mode');
         $(this).text(function(i, text) {
             return text === "Tryb nocny jak lisek" ? "Tryb dzienny" : "Tryb nocny jak lisek";
         });
-
-        // Update navbar and nav-link colors
-        $('.navbar').toggleClass('navbar-light navbar-dark');
-        $('.nav-link').toggleClass('text-dark text-light');
+        $('body').toggleClass('night-mode day-mode');
+        $('.navbar').toggleClass('night-mode light-mode');
+        $('.nav-link').toggleClass('night-mode light-mode');
         $('.card').toggleClass('day-mode-card night-mode-card');
     });
 
