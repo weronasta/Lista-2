@@ -1,3 +1,4 @@
+console.log(document);
 $(document).ready(function() {
     // Tryb nocny
     $('#toggleTheme').click(function() {
@@ -8,15 +9,25 @@ $(document).ready(function() {
         $('.navbar').toggleClass('night-mode light-mode');
         $('.nav-link').toggleClass('night-mode light-mode');
         $('.card').toggleClass('day-mode-card night-mode-card');
+        $('.footer').toggleClass('bg-light bg-dark');
     });
 
     // Load content dynamically
     $('a.nav-link').click(function(e) {
-        e.preventDefault();
         var target = $(this).attr('href');
-        $('html, body').animate({
-            scrollTop: $(target).offset().top
-        }, 1000);
+
+        if (target.includes('.html')) {
+            return;
+        }
+        e.preventDefault();
+        var targetElement = $(target);
+        if (targetElement.length) {
+            $('html, body').animate({
+                scrollTop: targetElement.offset().top
+            }, 1000);
+        } else {
+            console.error('Target element not found: ' + target);
+        }
     });
 
     // Sliding menu bar on hover
