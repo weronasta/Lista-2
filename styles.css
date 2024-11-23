@@ -1,11 +1,11 @@
 body.day-mode {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 249, 238);
     color: rgb(20, 9, 1);
 }
 
 body.night-mode {
-    background-color: rgb(20, 9, 1);
-    color: rgb(255, 192, 90);
+    background-color: #232527;
+    color: rgb(255, 255, 255);
 }
 
 .navbar-nav {
@@ -35,7 +35,7 @@ body.night-mode {
 }
 
 .night-mode .navbar {
-    background-color: #343a40;
+    background-color: #232527;
     color: white;
     border-bottom: 1px solid #ffc05a;
 }
@@ -69,8 +69,8 @@ body.night-mode {
 }
 
 .scaled-image {
-    max-width: 600px;
-    max-height: 600px;
+    max-width: 400px;
+    max-height: 400px;
     width: auto;
     height: auto;
     border-radius: 12px;
