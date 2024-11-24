@@ -1,6 +1,6 @@
 console.log(document);
 $(document).ready(function() {
-    // Tryb nocny
+    // Pkt 1 Zamiana kolorystyki całej strony z motywu noc/dzień po kliknięciu w odpowiednią ikonę
     $('#toggleTheme').click(function() {
         $(this).text(function(i, text) {
             return text === "Tryb nocny jak lisek" ? "Tryb dzienny" : "Tryb nocny jak lisek";
@@ -13,7 +13,7 @@ $(document).ready(function() {
         $('.footer').toggleClass('bg-light bg-dark');
     });
 
-    // Load content dynamically
+    // Pkt 3 Stworzenie menu umożliwiającego nawigowanie po aplikacji (w tym zastosowanie kotwicy).
     $('a.nav-link').click(function(e) {
         var target = $(this).attr('href');
 
@@ -31,16 +31,13 @@ $(document).ready(function() {
         }
     });
 
-
-
-    // Navbar hover
+    // Pkt 4 Dodanie wysuwanej belki menu po najechaniu myszką
     function enableDesktopHover() {
         if ($(window).width() >= 992) {
             $('.navbar').hover(function () {
                 $('.navbar-nav').toggleClass('show-menu');
             });
         } else {
-            // Usuwamy funkcję hover dla mniejszych ekranów
             $('.navbar').off('mouseenter mouseleave');
         }
     }
@@ -52,7 +49,7 @@ $(document).ready(function() {
     });
 
 
-    // Fetching images
+    //Pkt 5 Asynchroniczne pobieranie danych JSON z API
     $('#showFoxButton').click(async function() { 
         try {
             const response = await fetch('https://randomfox.ca/floof/'); // Asynchroniczne pobranie danych
@@ -66,4 +63,15 @@ $(document).ready(function() {
             console.error('Error fetching images:', error); // Obsługa błędów
         }
     });
+
+    // Pkt 6 Ukrywanie/wyświetlanie wybranego elementu strony po obsłudze zdarzenia innego niż kliknięcie lub najechanie myszką.
+    $('#exampleInput').focus(function () {
+        $('#tooltip').fadeIn();
+    });
+
+    $('#exampleInput').blur(function () {
+        $('#tooltip').fadeOut(); 
+    });
+
+    
 });

@@ -8,14 +8,6 @@ body.night-mode {
     color: rgb(255, 255, 255);
 }
 
-/* .navbar-nav {
-    display: none;
-}
-
-.navbar-nav.show-menu {
-    display: block;
-} */
-
 .day-mode .navbar-toggler-icon {
     background-color: #000000;
     border: none;
@@ -141,3 +133,15 @@ body.night-mode {
     text-align: center;
     display: block;
   }
+
+#tooltip {
+    display: none; 
+    position: absolute; 
+    top: 100%; 
+    left: 0; 
+    background: #f8f9fa; 
+    border: 1px solid #ced4da; 
+    padding: 8px; 
+    border-radius: 4px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
