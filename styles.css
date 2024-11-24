@@ -8,12 +8,22 @@ body.night-mode {
     color: rgb(255, 255, 255);
 }
 
-.navbar-nav {
+/* .navbar-nav {
     display: none;
 }
 
 .navbar-nav.show-menu {
     display: block;
+} */
+
+.day-mode .navbar-toggler-icon {
+    background-color: #000000;
+    border: none;
+}
+
+.night-mode .navbar-toggler-icon {
+    background-color: #ffffff;
+    border: none;
 }
 
 .day-mode .btn-primary {
@@ -53,6 +63,57 @@ body.night-mode {
 }
 
 .night-mode .navbar-brand {
+    color: #ffc05a;
+}
+
+.navbar-nav {
+    display: none;
+}
+
+/* Pokazywanie menu po najechaniu na navbar */
+.navbar:hover .navbar-nav {
+    display: block;
+}
+
+/* Stylizacja dla wysuwanego menu */
+.day-mode .navbar-nav {
+    position: absolute;
+    top: 48px; /* Wysokość paska nawigacyjnego */
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.night-mode .navbar-nav {
+    position: absolute;
+    top: 48px; /* Wysokość paska nawigacyjnego */
+    left: 0;
+    width: 100%;
+    background-color: #232527;
+    border-bottom: 1px solid #ffc05a;
+}
+
+.navbar-nav .nav-item {
+    display: block;
+    padding: 12px;
+}
+
+.day-mode .navbar-nav .nav-item a {
+    text-decoration: none;
+    color: #333;
+}
+
+.day-mode .navbar-nav .nav-item a:hover {
+    color: #c34e00;
+}
+
+.night-mode .navbar-nav .nav-item a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.night-mode .navbar-nav .nav-item a:hover {
     color: #ffc05a;
 }
 

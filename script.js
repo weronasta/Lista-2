@@ -6,6 +6,7 @@ $(document).ready(function() {
             return text === "Tryb nocny jak lisek" ? "Tryb dzienny" : "Tryb nocny jak lisek";
         });
         $('body').toggleClass('night-mode day-mode');
+        $('.navbar-toggler-icon').toggleClass('night-mode day-mode');
         $('.navbar').toggleClass('night-mode light-mode');
         $('.nav-link').toggleClass('night-mode light-mode');
         $('.card').toggleClass('day-mode-card night-mode-card');
@@ -30,10 +31,26 @@ $(document).ready(function() {
         }
     });
 
-    // Sliding menu bar on hover
-    $('.navbar').hover(function() {
-        $('.navbar-nav').toggleClass('show-menu');
+
+
+    // Navbar hover
+    function enableDesktopHover() {
+        if ($(window).width() >= 992) {
+            $('.navbar').hover(function () {
+                $('.navbar-nav').toggleClass('show-menu');
+            });
+        } else {
+            // Usuwamy funkcję hover dla mniejszych ekranów
+            $('.navbar').off('mouseenter mouseleave');
+        }
+    }
+
+    enableDesktopHover();
+
+    $(window).resize(function () {
+        enableDesktopHover();
     });
+
 
     // Fetching images
     $('#showFoxButton').click(async function() { 
