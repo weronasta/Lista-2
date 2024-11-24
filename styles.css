@@ -65,6 +65,7 @@ body.night-mode {
 /* Pokazywanie menu po najechaniu na navbar */
 .navbar:hover .navbar-nav {
     display: block;
+     z-index: 1030;
 }
 
 /* Stylizacja dla wysuwanego menu */

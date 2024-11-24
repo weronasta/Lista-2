@@ -13,6 +13,19 @@ $(document).ready(function() {
         $('.footer').toggleClass('bg-light bg-dark');
     });
 
+
+    // Pkt 2 Dynamiczne ładowanie podstron z wykorzystaniem metody load() lub innej
+    $('#loadFormButton').click(function () {
+        $('#dynamicContainer').load('formularz.html', function (response, status, xhr) {
+            if (status === "error") {
+                console.error("Error loading form: " + xhr.status + " " + xhr.statusText);
+            } else {
+                console.log("Form loaded successfully!");
+            }
+        });
+    });
+
+
     // Pkt 3 Stworzenie menu umożliwiającego nawigowanie po aplikacji (w tym zastosowanie kotwicy).
     $('a.nav-link').click(function(e) {
         var target = $(this).attr('href');
